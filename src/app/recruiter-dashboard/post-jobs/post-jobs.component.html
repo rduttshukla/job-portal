@@ -1,0 +1,27 @@
+<div id='post' class='row col-md-12'>
+    <div class="col-md-6 offset-3">
+    <h6><strong>Post a job</strong></h6>
+    <div class="form-group">
+        <label for="JobTitle">Job Title</label>
+        <input id="JobTitle" [(ngModel)]="jobTitle" class="form-control" type="text" placeholder="Job Title">
+        <label for="companyName">Company Name</label>
+        <input [(ngModel)]="company" id="companyName" class="form-control" type="companyName" placeholder="Company Name">
+        <div id="location" class="dropdown">
+        <label for="my-dropdown">Location: </label>
+        <button id="my-dropdown" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Location</button>
+        <div class="dropdown-menu" aria-labelledby="my-dropdown">
+            <a class="dropdown-item" (click)="selectLocation('Jaipur')">Jaipur</a>
+            <a class="dropdown-item" (click)="selectLocation('Oklahoma')">Oklahoma</a>
+            <a class="dropdown-item" (click)="selectLocation('Mumbai')">Mumbai</a>
+            <a class="dropdown-item" (click)="selectLocation('Banglore')">Banglore</a>
+        </div>
+        </div>
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Job description" class="form-control" rows="3" [(ngModel)]="description"></textarea>
+        <button class="btn btn-primary" (click)="postJob()" type="submit">Post job</button> 
+        <div *ngIf="response" class="alert alert-success" role="alert">
+        Job posted successfully!
+        </div>
+    </div>
+    </div>
+</div>

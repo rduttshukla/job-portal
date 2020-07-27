@@ -1,0 +1,73 @@
+<div class="background row">
+<nav [ngClass]="{'my-nav': onWindowScroll()}" class="col-md-12 navbar navbar-expand-lg navbar-dark sticky-top">
+    <a class="navbar-brand"><img height="40px" src="assets/logo.svg" alt="logo"></a>
+    <button class="navbar-toggler" data-target="#toggle" data-toggle="collapse" aria-controls="toggle" aria-expanded="false" aria-label="View Options">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="toggle" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/user-login"><span class="fa fa-search"></span> Find jobs <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <button class=" btn btn-primary" routerLink="/recruiter-login" tabindex="-1" aria-disabled="true"><span class="fa fa-plus"></span> Post jobs</button>
+            </li> -->
+        </ul>
+    </div>
+</nav>
+<div *ngIf="!registering" id="login" class="col-md-4 offset-6">
+    <h4> Login here...</h4>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control" type="text" [(ngModel)]="email" name="">
+        <label for="password">Password</label>
+        <input id="password" class="form-control" type="text" [(ngModel)]="password" name="">
+        <button class="btn btn-primary" type="button" (click)="login()">Login</button>
+        <button class="btn btn-link" type="button" (click)="registerToggle()">Don't have an account? Register here...</button>
+    </div>
+</div>
+<div *ngIf="registering" id="register" class="col-md-4 offset-6">
+    <h4><span class="fa fa-address-book"></span> Register here...</h4>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" class="form-control" type="text" [(ngModel)]="name" name="">
+        <label for="email">Email</label>
+        <input id="email" class="form-control" type="text" [(ngModel)]="email" name="">
+        <label for="username">Username</label>
+        <input id="username" class="form-control" type="text" [(ngModel)]="username" name="">
+        <label for="password">Password</label>
+        <input id="password" class="form-control" type="text" [(ngModel)]="password" name="">
+        <label for="cpassword">Confirm Password</label>
+        <input id="cpassword" class="form-control" type="text" [(ngModel)]="cpassword" name="">
+        <button class="btn btn-primary" type="button" (click)="register()">Register</button>
+        <div *ngIf="message" class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+        <div *ngIf="alert" class="alert alert-success" role="alert">
+                {{ alert }}
+        </div>
+        <button class="btn btn-link" type="button" (click)="registerToggle()">Or else login</button>
+    </div>
+</div>
+</div>
+
+<div id="info">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">all in one portal</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae assumenda itaque corrupti fugiat laborum hic incidunt, numquam reprehenderit vel explicabo sapiente tenetur quasi, possimus ex alias, quisquam soluta. Voluptas, esse.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">nowhere else</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error facilis soluta veniam doloremque praesentium minus, assumenda eaque suscipit eius distinctio modi facere odit necessitatibus repellendus debitis quis odio delectus numquam!</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">customer supoort</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam alias sunt repellat vel, doloremque cum neque magni corrupti sint asperiores iusto saepe? Voluptates nisi nobis saepe. Nisi ut temporibus natus.</p>
+        </div>
+    </div>
+</div>

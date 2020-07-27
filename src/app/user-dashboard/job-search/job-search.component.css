@@ -1,0 +1,16 @@
+li {
+    list-style-type: none;
+}
+
+td {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+p.search { 
+    cursor: pointer;
+    background: rgba(0, 118, 202, 0.192);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}

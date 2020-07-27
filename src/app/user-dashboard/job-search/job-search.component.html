@@ -1,0 +1,39 @@
+<div class ="row">
+    <div class="input-group col-md-10 offset-1">
+        <input class="form-control" [(ngModel)]="sq" placeholder="Search query" aria-label="search query">
+        <div class="dropdown">
+            <button id="locatio-dropdown" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Location</button>
+            <div class="dropdown-menu" aria-labelledby="locatio-dropdown">
+                <a class="dropdown-item" (click) = "selectLocation('Jaipur')" href="#">Jaipur</a>
+            </div>
+        </div>
+        <div class="input-group-append">
+            <button class="btn btn-info input-group-text" (click)="search()"><span class="fa fa-search"></span></button>
+        </div>
+    </div>
+</div>
+<table class="table table-light">
+    <tbody>
+        <tr class="row">
+            <td class="col-md-4 offset-1">
+                <li *ngIf="searchResult">
+                    <p class="search" *ngFor="let job of searchResult" (click) = "selectJob(job)">
+                        <strong>{{job.jobTitle}}</strong>
+                        <br>{{job.company}}
+                        <br><span class="fa fa-location-arrow"></span> {{job.location}}
+                    </p>
+                </li>
+            </td>
+            <td class="col-md-6 ">
+                <p *ngIf="!selectedJob">Click a job to show description of it.</p>
+                <p *ngIf="selectedJob">
+                    <strong>Job description</strong><br>
+                    <a *ngIf="applicationId">Your application has been successful!</a><br>
+                    <textarea class="form-control" type="text" name="applicationMessage" [(ngModel)]="applicationMessage" placeholder="Enter details about what makes you eligible this job..."></textarea>
+                    <button class="btn btn-info" type="submit" (click)="apply(selectedJob._id)">Apply</button><br><br>
+                    {{selectedJob.description}}
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>

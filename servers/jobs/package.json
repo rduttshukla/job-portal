@@ -1,0 +1,23 @@
+{
+  "name": "job-portal-backend",
+  "version": "1.0.0",
+  "description": "Backend server for the job portal I'm designing for the summer internship project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "job",
+    "portal"
+  ],
+  "author": "Rishi",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^5.6.0",
+    "uuid": "^3.3.2"
+  }
+}

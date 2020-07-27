@@ -1,0 +1,19 @@
+<!-- <p *ngIf="!responsesExsit">Sorry you've got no responses yet!</p> -->
+
+<div class="row">
+    <p  class="col-md-6 offset-3" *ngIf="responsesExist">Responses from recruiters: </p>
+    <table class="table table-light col-md-6 offset-3">
+        <tbody>
+            <tr *ngFor="let response of responses">
+                <p>
+                    <strong>Response from: </strong><br>
+                    <strong>Response for: </strong><br>
+                    <strong>Response: </strong>{{response}}<br>
+                    <button class="btn btn-primary" type="button"><span class="fa fa-toggle-up"></span> Mark as read</button>
+                </p>
+            </tr>
+        </tbody>
+    </table>       
+</div>
+
+

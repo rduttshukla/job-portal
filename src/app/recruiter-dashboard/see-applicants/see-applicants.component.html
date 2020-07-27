@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-5 offset-1">
+        <h3>Applicants' details</h3>
+        <div *ngFor="let applicant of applicants">
+            <div *ngFor="let person of applicant">
+                <strong>Name: </strong>{{person.name}}<br>
+                <strong>Email:</strong> {{person.email}}<br>
+                <strong>Applicant's message; </strong> {{ person.applicationMessage }}<br>
+                <button class="btn btn-info" type="button" (click)="respondToggle()">Respond</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div *ngIf="responding" class="form-group">
+            <label for="acceptance">Your message: </label>
+            <textarea id="acceptance" class="form-control" name="acceptMessage" [(ngModel)]="response" rows="3"></textarea>
+            <button class="btn btn-primary" type="submit" (click)="respond()">Send</button>  
+            <div *ngIf="ack">You have successfully responded!</div>
+        </div>
+    </div>
+</div>
+
+<div style = "background-image: url('assets/blur.jpg')"> HOLa
+Lorem Lorem, ipsum dolor sit ame Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit expedita minima libero blanditiis sed veniam reiciendis a quaerat sunt, rerum dolorem aspernatur veritatis omnis molestiae excepturi fuga corrupti odit ea? t consectetur adipisicing elit. Perferendis neque tempore ex, sit atque odio possimus laborum dolores, dolorum quo autem officiis sunt fugiat voluptates distinctio magni sed explicabo iusto. ipsum dolor sit amet consectetur adipisicing elit. Vitae fugit distinctio deserunt et consectetur maxime quidem? Aut, optio sapiente vero impedit, voluptatibus incidunt nesciunt repudiandae est nobis ipsam, enim fugiat.</div>
+
+

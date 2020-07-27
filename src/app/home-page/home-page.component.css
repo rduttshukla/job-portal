@@ -1,0 +1,37 @@
+/* .my-nav {
+    background: rgb(0, 148, 176);
+ } */
+
+#login, #register {
+    background: rgba(255, 255, 255, 0.8);
+    margin: 30px;
+}
+
+h4 {
+    margin: 10px;
+}
+
+button {
+    margin: 5px;
+}
+
+.card {
+    margin: 10px;
+}
+
+ .background {
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url('https://www.pexels.com/photo/2102416/download/?search_query=man%2520in%2520front%2520of%2520computer&tracking_id=nl4mrjumy2k') ; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover;
+  }
+ 

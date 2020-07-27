@@ -1,0 +1,30 @@
+<div class="background row">
+    <nav class="col-md-12 navbar navbar-expand-lg my-nav navbar-dark sticky-top">
+        <a routerLink="./" class="navbar-brand"><img height="40px" src="assets/logo.svg" alt="logo"></a>
+        <button class="navbar-toggler" data-target="#toggle" data-toggle="collapse" aria-controls="toggle" aria-expanded="false" aria-label="View Options">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="toggle" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="./post-jobs">Post Jobs</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="./see-applicants">Applicants</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                <button class= "btn btn-primary" routerLink="/user-dashboard" aria-disabled="true"><span class="fa fa-search"></span> Search Jobs</button>
+                </li>
+                <li class="nav-item">
+                <button class= "btn btn-primary" (click)="logout()" tabindex="-1" aria-disabled="true"><span class="fa fa-power-off"></span> Logout</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
