@@ -13,7 +13,7 @@ export class JobSearchComponent implements OnInit {
   sq: string;
   location: string;
   email: string;
-  response: object;
+  response: any;
   applicationId: object;
   applicationMessage: string;
 

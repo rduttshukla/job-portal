@@ -16,10 +16,10 @@ export class PostJobsComponent implements OnInit {
   description: String;
   jobs: object;
   jobDetails = {
-    jobTitle: { type: String },
-    company: { type: String },
-    location: { type: String },
-    description: { type: String }
+    jobTitle: "",
+    company: "",
+    location: "",
+    description: ""
   }
 
   constructor( private httpClient: HttpClient, private jobsProviderService: JobsProviderService) { }
@@ -34,8 +34,8 @@ export class PostJobsComponent implements OnInit {
 
   postJob() {
     this.jobDetails.jobTitle = String(this.jobTitle);
-    this.jobDetails.company = this.company;
-    this.jobDetails.description = this.description;
+    this.jobDetails.company = String(this.company);
+    this.jobDetails.description = String(this.description);
     this.jobsProviderService.postJobs(this.jobDetails).subscribe( response => {
       this.response = response
       console.log(this.response)
